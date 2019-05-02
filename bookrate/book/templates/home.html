@@ -1,17 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+{% load staticfiles %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Document</title>
 </head>
 <body>
-    <h1>책 리뷰 사이트</h1>
-    <h2> 리뷰 목록 </h2>
+    <div class = "title">
+        <div>
+        <h1 class="title_color">유나의 책 리뷰</h1>
+        </div>
+    </div>
+    {% block content %}
+    <div class="body">
         {% for post in posts %}
-            <li><a href="{% url 'detail' post.pk %}">{{ post.title }}</a></li><br>
+         <div class="card" style="width: 18rem;">
+         <div class="card-body">
+             <h5 class="card-title">{{ post.title }}</h5>
+            <a href="{% url 'detail' post.pk %}" class="card-link">리뷰보기</a>
+        </div>
+        </div>
         {% endfor %}
-    <a href="{% url 'new' %}">리뷰쓰기</a>
+    <a href="{% url 'new' %}" class="btn btn-outline-secondary" role="button" aria-pressed="true">리뷰쓰기</a>
+    </div>
+    {% endblock %}
 </body>
 </html>

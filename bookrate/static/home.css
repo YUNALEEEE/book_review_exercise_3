@@ -1,0 +1,60 @@
+
+.title{
+    display: flex;
+    margin : 0 auto;
+    align-items: center;
+    padding: 20px 50px;
+    border-bottom: 1px solid grey;
+
+}
+.title_color{
+    width: 1200px;
+    height: 70px;
+    color: grey;
+    margin: 0 auto;
+    font-family: "나눔손글씨 붓";
+    font-size: 50px;
+}
+
+.card{
+    margin: 10px 0px;
+}
+
+.card-body{
+    background-color: rgba(231, 231, 231, 0.89);
+}
+
+.body{
+    padding: 20px 50px;
+}
+
+.detail{
+    padding: 20px 50px;
+}
+
+.detail_title{
+    font-size: 20px;
+    font-family: "나눔손글씨 붓";
+}
+
+.content{
+    border: 1px solid grey;
+    padding: 3px 3px;
+}
+
+.new{
+    padding: 20px 50px;
+}
+
+.new_title{
+    font-size: 20px;
+    font-family: "나눔손글씨 붓";
+}
+
+.edit{
+    padding: 20px 50px;
+}
+.edit_title{
+    font-size: 20px;
+    font-family: "나눔손글씨 붓";
+}

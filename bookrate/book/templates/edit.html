@@ -9,15 +9,16 @@
     {% extends "home.html" %}
 <body>
     {% block content %}
-    <div class="new">
-        <div class="new_title">
-        <h1>새로운 리뷰쓰기 !</h1>
-         </div>
+    <div class = "edit">
+     <div class="edit_title">
+         <h1>수정하기</h1>
+     </div>
     <form method="POST">{% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">제출 !</button>
+        {{ form.as_p}}
+        <button type="submit">수정</button>
     </form>
     </div>
     {% endblock %}
+    
 </body>
 </html>
